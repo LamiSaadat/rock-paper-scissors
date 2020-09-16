@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //function computerPlay will randomly return either rock, paper or scissors
+            const plays = ['rock', 'paper', 'scissors'];
+
+            function computerPlay(plays) {
+                return plays[Math.floor(Math.random()*plays.length)];
+            }
+           
+
+            
+            //function plays 5 rounds of game
+            function game(playerSelection, computerSelection) {
+                if ((playerSelection === 'paper' && computerSelection === 'rock') ||(playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === 'rock' && computerSelection === 'scissors')) {
+                    return 'Player wins!';
+                } else if (playerSelection === computerSelection) {
+                    return 'It\'s a tie!';
+                } else {
+                    return 'Computer wins!';
+                }
+            } 
+        
+
+
+            let playerSelection = 'scissors';
+            let computerSelection = computerPlay(plays);
+           
+
+            console.log(computerPlay(plays));
+            console.log(game(playerSelection, computerSelection));
+            
+        </script>
+    </body>
+</html>
